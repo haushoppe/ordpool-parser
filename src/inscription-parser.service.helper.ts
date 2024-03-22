@@ -138,7 +138,7 @@ export function hasInscription(witness: string[]): boolean {
  */
 export function extractPointer(value: Uint8Array | undefined): number | undefined {
 
-  if (value === undefined) {
+  if (value === undefined || value.length > 8) {
     return undefined;
   }
 
